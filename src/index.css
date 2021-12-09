@@ -1,13 +1,97 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import 'https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css'; */
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+		'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.my-image {
+	width: 50px;
+	height: 50px;
+}
+
+.card-image {
+	width: 100%;
+	height: 200px;
+	object-fit: scale-down;
+}
+.modal {
+	font-size: 12px;
+}
+.modal > .header {
+	width: 100%;
+	border-bottom: 1px solid gray;
+	font-size: 18px;
+	text-align: center;
+	padding: 5px;
+}
+.modal > .content {
+	width: 100%;
+	padding: 10px 5px;
+}
+.modal > .actions {
+	width: 100%;
+	padding: 10px 5px;
+	margin: auto;
+	text-align: center;
+}
+.modal > .close {
+	cursor: pointer;
+	position: absolute;
+	display: block;
+	padding: 2px 5px;
+	line-height: 20px;
+	right: -10px;
+	top: -10px;
+	font-size: 24px;
+	background: #ffffff;
+	border-radius: 18px;
+	border: 1px solid #cfcece;
+}
+.dropdown:focus-within .dropdown-menu {
+	opacity: 1;
+	transform: translate(0) scale(1);
+	visibility: visible;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.group:hover .dropdown {
+	animation: fadeIn .4s forwards;
+}
+
+.dropdown {
+	animation: fadeOut .4s forwards;
+	animation-delay: 5s;
+}
+
+@keyframes fadeIn {
+	0% {
+		@apply block opacity-0;
+	}
+	100% {
+		@apply opacity-100;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		@apply opacity-100;
+	}
+	100% {
+		@apply opacity-0 hidden;
+	}
 }
